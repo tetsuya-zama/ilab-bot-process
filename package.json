@@ -1,0 +1,19 @@
+{
+  "name": "ilab-bot-process",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.156.0"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "power-assert": "^1.4.4",
+    "sinon": "^4.1.2"
+  }
+}
