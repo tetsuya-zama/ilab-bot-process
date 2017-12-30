@@ -34,6 +34,7 @@ function createPromise(functionName,event,lammbda){
     }
     lammbda.invoke(params,function(err,data){
       if(err){
+        console.log(err);
         resolve(null);//primise allはfail firstのためrejectしない
       }else{
         if(data.Payload){

@@ -59,6 +59,7 @@ function createPromise(functionData,event,lambda){
 
     lambda.invoke(params,function(err,data){
       if(err){
+        console.log(err);
         resolve(null);
       }else{
         if(data.Payload){

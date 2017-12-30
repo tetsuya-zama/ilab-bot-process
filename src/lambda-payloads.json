@@ -1,0 +1,50 @@
+{
+    "iLabBotProcessJoin": {
+        "lambda": {
+            "functions": [
+                "nodeGreeting",
+                "nodeGreeting"
+            ],
+            "event": {
+                "message": {
+                    "type": "text",
+                    "text": "おはよう"
+                }
+            }
+        }
+    },
+    "iLabBotProcessRace": {
+        "lambda": {
+            "functions": [
+                "nodeGreeting",
+                "nodeGreeting"
+            ],
+            "event": {
+                "message": {
+                    "type": "text",
+                    "text": "おはよう"
+                }
+            }
+        }
+    },
+    "iLabBotProcessPrior": {
+        "lambda": {
+            "functions": [
+                {
+                    "name": "nodeGreeting",
+                    "priority": 1
+                },
+                {
+                    "name": "nodeGreeting",
+                    "priority": 2
+                }
+            ],
+            "event": {
+                "message": {
+                    "type": "text",
+                    "text": "おはよう"
+                }
+            }
+        }
+    }
+}

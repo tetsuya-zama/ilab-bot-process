@@ -40,6 +40,7 @@ function createPromise(functionName,event,lambda){
 
     lambda.invoke(params,function(err,data){
       if(err){
+        console.log(err);
         //noop エラーの場合は無視する
       }else{
         if(data.Payload){

@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+    iLabBotProcessJoin:
+        Type: 'AWS::Serverless::Function'
+        Properties:
+          Handler: src/join.handler
+          Runtime: nodejs6.10
+          Description: ''
+          MemorySize: 128
+          Timeout: 15
+    iLabBotProcessPrior:
+        Type: 'AWS::Serverless::Function'
+        Properties:
+          Handler: src/prior.handler
+          Runtime: nodejs6.10
+          Description: ''
+          MemorySize: 128
+          Timeout: 15
+    iLabBotProcessRace:
+        Type: 'AWS::Serverless::Function'
+        Properties:
+          Handler: src/race.handler
+          Runtime: nodejs6.10
+          Description: ''
+          MemorySize: 128
+          Timeout: 15
