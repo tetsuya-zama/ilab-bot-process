@@ -1,7 +1,8 @@
 "use strict";
 
 const AWS = require("aws-sdk");
-const lambda = new AWS.Lambda();
+const REGION = process.env.REGION;
+const lambda = new AWS.Lambda({region: REGION});
 
 function factory(lambda){
   return function handler(event,context,callback){

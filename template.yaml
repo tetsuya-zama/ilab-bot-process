@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: An AWS Serverless Specification template describing your function.
 Resources:
-    iLabBotProcessJoin:
+    join:
         Type: 'AWS::Serverless::Function'
         Properties:
           Handler: src/join.handler
@@ -10,7 +10,11 @@ Resources:
           Description: ''
           MemorySize: 128
           Timeout: 15
-    iLabBotProcessPrior:
+          Role: arn:aws:iam::966887599552:role/ilab-bot-functions
+          Environment:
+            Variables:
+              REGION: ap-northeast-1
+    prior:
         Type: 'AWS::Serverless::Function'
         Properties:
           Handler: src/prior.handler
@@ -18,7 +22,11 @@ Resources:
           Description: ''
           MemorySize: 128
           Timeout: 15
-    iLabBotProcessRace:
+          Role: arn:aws:iam::966887599552:role/ilab-bot-functions
+          Environment:
+            Variables:
+              REGION: ap-northeast-1
+    race:
         Type: 'AWS::Serverless::Function'
         Properties:
           Handler: src/race.handler
@@ -26,3 +34,7 @@ Resources:
           Description: ''
           MemorySize: 128
           Timeout: 15
+          Role: arn:aws:iam::966887599552:role/ilab-bot-functions
+          Environment:
+            Variables:
+              REGION: ap-northeast-1

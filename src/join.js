@@ -1,7 +1,8 @@
 "use strict";
 
 const AWS = require("aws-sdk");
-const lammbda = new AWS.Lambda();
+const REGION = process.env.REGION;
+const lambda = new AWS.Lambda({region: REGION});
 
 function factory(lammbda){
   return function handler(event,context,callback){
@@ -61,4 +62,4 @@ function validationMessage(functions,event){
 
 exports.factory = factory;
 
-exports.handler = factory(lammbda);
+exports.handler = factory(lambda);

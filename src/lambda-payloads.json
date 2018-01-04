@@ -1,5 +1,5 @@
 {
-    "iLabBotProcessJoin": {
+    "join": {
         "lambda": {
             "functions": [
                 "nodeGreeting",
@@ -13,7 +13,7 @@
             }
         }
     },
-    "iLabBotProcessRace": {
+    "race": {
         "lambda": {
             "functions": [
                 "nodeGreeting",
@@ -27,7 +27,7 @@
             }
         }
     },
-    "iLabBotProcessPrior": {
+    "prior": {
         "lambda": {
             "functions": [
                 {
