@@ -44,7 +44,9 @@ function createPromise(functionName,event,lambda){
         console.log(err);
         //noop エラーの場合は無視する
       }else{
-        if(data.Payload){
+        if(data.FunctionError){
+          console.log(data.Payload);
+        }else if(data.Payload && data.Payload !== "null"){
           resolve(data.Payload);
         }else{
           //戻り値が無いものも無視する

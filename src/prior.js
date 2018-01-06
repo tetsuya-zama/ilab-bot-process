@@ -22,6 +22,7 @@ function factory(lambda){
 
         Promise.all(promises).then(values => {
           const notNullValues = values.filter(v => v !== null);
+          console.log(notNullValues);
 
           if(notNullValues.length === 0){
             callback();
@@ -63,7 +64,10 @@ function createPromise(functionData,event,lambda){
         console.log(err);
         resolve(null);
       }else{
-        if(data.Payload){
+        if(data.FunctionError){
+          console.log(data.Payload);
+          resolve(null);
+        }else if(data.Payload && data.Payload !== "null"){
           resolve({value:data.Payload,priority:functionData.priority});
         }else{
           resolve(null);

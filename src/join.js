@@ -38,7 +38,10 @@ function createPromise(functionName,event,lammbda){
         console.log(err);
         resolve(null);//primise allはfail firstのためrejectしない
       }else{
-        if(data.Payload){
+        if(data.FunctionError){
+          console.log(data.Payload);
+          resolve(null);
+        }else if(data.Payload && data.Payload !== "null"){
           resolve(data.Payload);
         }else{
           resolve(null);
